@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-white text-gray-900 scroll-smooth">
+    
+    <!-- nav -->
+    <nav class="fixed top-0 left-0 w-full shadow-lg z-50 bg-white">
+        <div class="flex mx-auto justify-evenly p-4">
+
+            <h1 class="font-bold text-red-600 text-2xl">Feedo</h1>
+
+            <ul class="flex gap-10 py-2">
+                <li><a href="#menu" class="transition-transform duration-200 hover:text-red-600 hover:-translate-y-0.5 inline-block">Menu</a></li>
+                <li><a href="#how" class="transition-transform duration-200 hover:text-red-600 hover:-translate-y-0.5 inline-block">How It Works</a></li>
+                <li><a href="#order" class="transition-transform duration-200 hover:text-red-600 hover:-translate-y-0.5 inline-block">Orders</a></li>
+            </ul>
+
+            <button class="bg-red-600 text-white px-6 py-2 rounded-xl transition-transform duration-200 hover:-translate-y-1 hover:bg-red-500">Register / Login</button>
+
+        </div>
+    </nav>
+
+    <!-- hero -->
+    <section class="pt-32 pb-16 bg-orange-100">
+        <div class="mx-auto px-10 lg:px-5 grid md:grid-cols-2 gap-10 items-center max-w-7xl">
+
+            <div class="text-center lg:text-left">
+                <p class="text-red-600 font-bold mb-3 tracking-widest">
+                    Fresh Food Delivery
+                </p>
+          
+                <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-5 ">
+                    Delicious food delivered fast at your door.
+                </h2>
+
+                <p class="text-gray-600 mb-6 text-lg">
+                    Register, login, browse food items and track your order easily with Feedo.
+                </p>
+
+                <div class="flex gap-4 justify-center">
+                    <button class="bg-red-600 text-white px-6 py-3 rounded-xl transition-transform duration-200 hover:-translate-y-1">
+                        Get Started
+                    </button>
+
+                    <a href="#menu" class="border border-gray-800 px-6 py-3 rounded-xl transition-transform duration-200 hover:-translate-y-1 hover:bg-white hover:text-red-500">
+                        View Menu
+                    </a>
+                </div>
+            </div>
+
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+                alt="Food Delivery"
+                class="w-full rounded-2xl shadow-2xl">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- menu -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-12">
+                <p class="text-red-600 font-bold tracking-widest mb-2">
+                    Popular Items
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold">
+                    Our Food Menu
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+
+                <div class="shadow-2xl rounded-3xl overflow-hidden transition-transform duration-200 hover:-translate-y-2">
+                    <img
+                      src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=700&q=80"
+                      alt="Burger"
+                      class="w-full h-48 object-cover"
+                    >
+
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Classic Burger</h3>
+
+                        <p class="text-gray-600 mb-3">
+                          Fresh burger with cheese and special sauce.
+                        </p>
+
+                        <p class="text-green-600 font-bold mb-4">
+                          Rs. 199
+                        </p>
+
+                        <button class="bg-red-600 text-white w-full py-2 rounded-xl transition-transform duration-200 hover:-translate-y-1">
+                          Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shadow-lg rounded-2xl overflow-hidden transition-transform duration-200 hover:-translate-y-2">
+                    <img
+                      src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80"
+                      alt="Pizza"
+                      class="w-full h-48 object-cover"
+                    >
+
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2 item-center">Fresh Pizza</h3>
+                    
+                        <p class="text-gray-600 mb-3">
+                          Cheesy pizza with vegetables and herbs.
+                        </p>
+
+                        <p class="text-green-600 font-bold mb-4">
+                          Rs. 299
+                        </p>
+
+                        <button class="bg-red-600 text-white w-full py-2 rounded-xl transition-transform duration-200 hover:-translate-y-1">
+                          Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shadow-2xl rounded-2xl overflow-hidden transition-transform duration-200 hover:-translate-y-2">
+                    <img
+                      src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80"
+                      alt="Noodles"
+                      class="w-full h-48 object-cover"
+                    >
+
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Spicy Noodles</h3>
+                        
+                        <p class="text-gray-600 mb-3">
+                          Hot noodles with vegetables and spices.
+                        </p>
+                      
+                        <p class="text-green-600 font-bold mb-4">
+                          Rs. 149
+                        </p>
+                      
+                        <button class="bg-red-600 text-white w-full py-2 rounded-xl transition-transform duration-200 hover:-translate-y-1">
+                          Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shadow-lg rounded-2xl overflow-hidden transition-transform duration-200 hover:-translate-y-2">
+                    <img
+                      src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80"
+                      alt="Salad"
+                      class="w-full h-48 object-cover"
+                    >
+
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Healthy Salad</h3>
+                        
+                        <p class="text-gray-600 mb-3">
+                          Fresh salad with vegetables and dressing.
+                        </p>
+                      
+                        <p class="text-green-600 font-bold mb-4">
+                          Rs. 169
+                        </p>
+                      
+                        <button class="bg-red-600 text-white w-full py-2 rounded-xl transition-transform duration-200 hover:-translate-y-1">
+                          Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- how it work -->
+    <section id="how" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-7">
+
+            <div class="text-center mb-12">
+                <p class="text-red-600 font-bold tracking-widest mb-2">
+                  Simple Process
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold">
+                  How It Works
+                </h2>
+            </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg text-center transition-transform duration-200 hover:-translate-y-2">
+                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-5 text-2xl font-bold">
+                  1
+                </div>
+            
+                <h3 class="text-xl font-bold mb-3">
+                  Register
+                </h3>
+            
+                <p class="text-gray-600">
+                  Create your account using name, email, phone and password.
+                </p>
+            </div>
+          
+            <div class="bg-white p-8 rounded-2xl shadow-lg text-center transition-transform duration-200 hover:-translate-y-2">
+                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-5 text-2xl font-bold">
+                  2
+                </div>
+            
+                <h3 class="text-xl font-bold mb-3">
+                  Choose Food
+                </h3>
+            
+                <p class="text-gray-600">
+                  Select your favorite food items from the menu and add them to cart.
+                </p>
+            </div>
+          
+            <div class="bg-white p-8 rounded-2xl shadow-lg text-center transition-transform duration-200 hover:-translate-y-2">
+                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-5 text-2xl font-bold">
+                  3
+                </div>
+            
+                <h3 class="text-xl font-bold mb-3">
+                  Get Delivery
+                </h3>
+            
+                <p class="text-gray-600">
+                  Your order will be prepared and delivered quickly at your door.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- order summary -->
+
+
+    <!-- regiser/login -->
+
+
+
+</body>
+</html>
