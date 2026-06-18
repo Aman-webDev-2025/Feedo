@@ -1,5 +1,12 @@
 const userModel = require('../models/userModel');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
+const createToken = (id)=> {
+    return jwt.sign({ id } , process.env.JWT_SECRET,
+        {expiresIn: "1d"}
+    )
+}
 
 //user registration
 exports.registerUser = async(req , res)=> {
@@ -26,10 +33,13 @@ exports.registerUser = async(req , res)=> {
             phone
         });
 
+        const token = createToken(user._id);
+
         return res.status(201).json({
             success: true,
             message: "user registered successfully",
-            user
+            user,
+            token
         });
     }
     catch(error){
@@ -60,10 +70,13 @@ exports.loginUser = async (req , res)=> {
             return res.status(400).json("please enter correct password");
         }
 
+        const token = createToken(user._id);
+
         return res.status(200).json({
             success: true,
             message: "user login successfully",
-            user
+            user,
+            token
         })
     }
     catch(error){
@@ -71,5 +84,28 @@ exports.loginUser = async (req , res)=> {
             success: false,
             message: "Login is failed. Please try again later"
         })
+    }
+}
+
+
+//user profile
+exports.getUserProfile = async( req , res)=>{
+    try{
+        const user = await userModel.findById(req.userId).select("-password");
+        if(!user){
+            return res.status(404).json({
+                success: false,
+                message: "User not found"
+            });
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: "User found",
+            user
+        })
+    }
+    catch(error){
+        res.status(500).json("Cant fetch profile right now. Please try again later");
     }
 }
